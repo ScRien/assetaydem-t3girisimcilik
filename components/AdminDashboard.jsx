@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Trash2, Download, RefreshCw, LogOut, Users, Calendar, Globe } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 function formatDate(dateStr) {
   if (!dateStr) return '—';
@@ -83,11 +84,11 @@ export default function AdminDashboard() {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-              <Shield size={20} className="text-primary" />
+              <Image src="/logo.png" alt="Airdus Remote Logo" width={24} height={24} className="object-contain drop-shadow-md" />
             </div>
             <div>
               <h1 className="font-heading font-bold text-xl text-white">Admin Paneli</h1>
-              <p className="text-xs text-textMuted">ASSET & AYDEM — Ön Erişim Yönetimi</p>
+              <p className="text-xs text-textMuted">Airdus Remote — Ön Erişim Yönetimi</p>
             </div>
           </div>
 

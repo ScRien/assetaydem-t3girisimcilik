@@ -162,7 +162,7 @@ export default function Hero3D() {
     <canvas
       ref={canvasRef}
       className="w-full h-full block"
-      aria-label="ASSET & AYDEM sistem animasyonu"
+      aria-label="Airdus Remote sistem animasyonu"
     />
   );
 }

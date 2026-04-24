@@ -3,15 +3,15 @@ import { cookies } from 'next/headers';
 import clientPromise from '@/lib/db';
 import { ObjectId } from 'mongodb';
 
-function isAuthenticated() {
-  const cookieStore = cookies();
+async function isAuthenticated() {
+  const cookieStore = await cookies();
   const auth = cookieStore.get('admin_auth');
   return auth?.value === process.env.ADMIN_PASSWORD;
 }
 
 // GET: list all waitlist entries
 export async function GET() {
-  if (!isAuthenticated()) {
+  if (!(await isAuthenticated())) {
     return NextResponse.json({ error: 'Yetkisiz erişim.' }, { status: 401 });
   }
   try {
@@ -40,7 +40,7 @@ export async function GET() {
 
 // DELETE: remove a single entry by id
 export async function DELETE(req) {
-  if (!isAuthenticated()) {
+  if (!(await isAuthenticated())) {
     return NextResponse.json({ error: 'Yetkisiz erişim.' }, { status: 401 });
   }
   try {

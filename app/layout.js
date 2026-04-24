@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'ASSET & AYDEM — Otonom Orman Savunma Sistemi',
+  title: 'Airdus Remote — Otonom Orman Savunma Sistemi',
   description:
     'Türkiye\'nin ormanlarını korumak için yapay zeka destekli otonom sensör ağı ve drone filosu. Yangını saniyeler içinde tespit et, dakikalar içinde müdahale et.',
   keywords: 'orman yangını, otonom drone, yapay zeka, IoT, edge AI, yangın söndürme',

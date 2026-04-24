@@ -5,12 +5,12 @@ import AdminDashboard from '@/components/AdminDashboard';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'Admin Panel — ASSET & AYDEM',
+  title: 'Admin Panel — Airdus Remote',
   robots: 'noindex, nofollow',
 };
 
 export default async function AdminPage() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const authCookie = cookieStore.get('admin_auth');
   const isAuthenticated = authCookie?.value === process.env.ADMIN_PASSWORD;
 

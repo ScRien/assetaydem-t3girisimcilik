@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Eye, EyeOff, Loader2, AlertCircle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function AdminLogin() {
   const [password, setPassword] = useState('');
@@ -43,7 +44,7 @@ export default function AdminLogin() {
         <div className="glass rounded-2xl p-8 border border-white/10 flex flex-col gap-6">
           <div className="flex flex-col items-center gap-3">
             <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-              <Shield size={24} className="text-primary" />
+              <Image src="/logo.png" alt="Airdus Remote Logo" width={28} height={28} className="object-contain drop-shadow-md" />
             </div>
             <h1 className="font-heading font-bold text-2xl text-white">Admin Paneli</h1>
             <p className="text-textMuted text-sm text-center">

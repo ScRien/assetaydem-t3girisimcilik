@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Shield, Menu, X, Zap } from 'lucide-react';
 
@@ -31,12 +32,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="relative w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-            <Shield size={18} className="text-primary" />
+            <Image src="/logo.png" alt="Airdus Remote Logo" width={24} height={24} className="object-contain drop-shadow-md" />
             <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-primary animate-pulse" />
           </div>
           <div className="flex flex-col leading-none">
-            <span className="font-heading font-bold text-sm text-white tracking-wide">ASSET & AYDEM</span>
-            <span className="text-[10px] text-primary/60 tracking-widest uppercase">Defense Ecosystem</span>
+            <span className="font-heading font-bold text-sm text-white tracking-wide">Airdus Remote</span>
+            <span className="text-[10px] text-primary/60 tracking-widest uppercase">Airdus Remote Ecosystem</span>
           </div>
         </Link>
 

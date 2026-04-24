@@ -21,15 +21,7 @@ export default function HeroSection() {
 
         {/* Left: headline + CTAs */}
         <div className="flex flex-col gap-7 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full glass border border-white/10 text-xs font-semibold text-textMuted"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            T3 Girişimcilik — İnovasyon Projesi 2024
-          </motion.div>
+
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -57,10 +49,10 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="text-textMuted text-lg leading-relaxed max-w-lg"
           >
-            <strong className="text-white">ASSET</strong> sensör ağıyla yangını{' '}
+            <strong className="text-white">Airdus Remote</strong> sensör ağıyla yangını{' '}
             <strong className="text-primary">saniyeler</strong> içinde tespit et.{' '}
-            <strong className="text-white">AYDEM</strong> drone filosuyla{' '}
-            <strong className="text-primary">dakikalar</strong> içinde otonom müdahale gerçekleştir.
+            <strong className="text-white">Otonom</strong> drone filosuyla{' '}
+            <strong className="text-primary">dakikalar</strong> içinde müdahale gerçekleştir.
             İnsan hatası sıfır — etki maksimum.
           </motion.p>
 
