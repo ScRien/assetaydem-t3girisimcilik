@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Airdus Remote — Otonom Orman Savunma Sistemi',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-background text-textMain antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
