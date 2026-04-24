@@ -1,44 +1,46 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
         background: '#000000',
         surface: '#0a0a0f',
-        card: '#0d0d14',
-        border: '#1a1a2e',
+        card: '#0d0d16',
         primary: '#00e5ff',
         secondary: '#7c3aed',
         accent: '#ff6b35',
         danger: '#ff0044',
         textMain: '#f0f0f0',
         textMuted: '#6b7280',
-        textDim: '#374151',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['Space Grotesk', 'sans-serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      boxShadow: {
+        'neon-primary': '0 0 20px rgba(0,229,255,0.3), 0 0 60px rgba(0,229,255,0.1)',
+        'neon-secondary': '0 0 20px rgba(124,58,237,0.3)',
+        card: '0 4px 32px rgba(0,0,0,0.7)',
+      },
+      keyframes: {
+        float: {
+          '0%,100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        pulseGlow: {
+          '0%,100%': { boxShadow: '0 0 20px rgba(0,229,255,0.2)' },
+          '50%': { boxShadow: '0 0 50px rgba(0,229,255,0.5)' },
+        },
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-        'gradient': 'gradientShift 6s ease infinite',
+        float: 'float 5s ease-in-out infinite',
+        pulseGlow: 'pulseGlow 3s ease-in-out infinite',
       },
-      boxShadow: {
-        'neon-primary': '0 0 20px rgba(0, 229, 255, 0.3), 0 0 60px rgba(0, 229, 255, 0.1)',
-        'neon-secondary': '0 0 20px rgba(124, 58, 237, 0.3), 0 0 60px rgba(124, 58, 237, 0.1)',
-        'neon-accent': '0 0 20px rgba(255, 107, 53, 0.3), 0 0 60px rgba(255, 107, 53, 0.1)',
-        'card': '0 4px 24px rgba(0, 0, 0, 0.6)',
-      }
     },
   },
   plugins: [],
-}
+};
